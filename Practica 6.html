@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Practica 6 Atributos Texto </title>
+ <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .schedule-container {
+            width: 100%;
+            max-width: 850px;
+        }
+
+
+        .group-id {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        th, td {
+            border: 1px solid #000000;
+            padding: 6px;
+            vertical-align: middle;
+        }
+
+        th {
+            font-weight: bold;
+        }
+
+        .titulo-col {
+            width: 10%;
+            font-size: 11px;
+            font-weight: bold;
+            color:darkblue ;
+        }
+
+        .cell-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            line-height: 1.2;
+        }
+
+        .subject-code {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="schedule-container">
+    <div class="group-id">Semaforo <br style="width: 90%"> TRIAGE </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 10%; bg: gray;">Tipo de atención</th>
+                <th style="width: 18%;">Área de atención</th>
+                <th style="width: 18%;">Tiempo de espera</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="time-col">Reanimacion</td>
+                <td>
+                    <div class="cell-content">
+                        <span class="subject-code">Area de reanimacion</span>
+                    </div>
+                </td>
+                <td>
+                	<div class="cell-content">
+                        <span class="subject-code">Inmediato hasta 3 min</span>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="time-col">Emergencia</td>
+                <td>
+                    <div class="cell-content">
+                        <span class="subject-code">Area de reanimacion</span>
+                    </div>
+                </td>
+                <td>
+                	<div class="cell-content">
+                        <span class="subject-code">Inmediato hasta 10 min </span>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="time-col"> Urgencia </td>
+                <td>
+                    <div class="cell-content">
+                        <span class="subject-code"> Consultorio de primer contacto </span>
+                    </div>
+                </td>
+                <td>
+                    <div class="cell-content">
+                        <span class="subject-code">Hasta 30 min</span>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="time-col">Urgencia menor</td>
+                <td>
+                    <div class="cell-content">
+                        <span class="subject-code">Consultorio de primer contacto o UMF</span>
+                    </div>
+                </td>
+                <td>
+                    <div class="cell-content">
+                        <span class="subject-code">Hasta 120 min</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="time-col">Sin Urgencia</td>
+                <td>
+                    <div class="cell-content">
+                        <span class="subject-code">Consultorio de primer contacto o UMF</span>
+                    </div>
+                </td>
+                <td>
+                    <div class="cell-content">
+                        <span class="subject-code">Hasta 180 min</span>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
