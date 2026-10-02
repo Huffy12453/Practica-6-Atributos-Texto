@@ -1,154 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title> Practica 6 Atributos Texto </title>
- <style>
-        * {
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background-color: #ffffff;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .schedule-container {
-            width: 100%;
-            max-width: 850px;
-        }
-
-
-        .group-id {
-            text-align: center;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: center;
-            font-size: 12px;
-        }
-
-        th, td {
-            border: 1px solid #000000;
-            padding: 6px;
-            vertical-align: middle;
-        }
-
-        th {
-            font-weight: bold;
-        }
-
-        .titulo-col {
-            width: 10%;
-            font-size: 11px;
-            font-weight: bold;
-            color:darkblue ;
-        }
-
-        .cell-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            line-height: 1.2;
-        }
-
-        .subject-code {
-            font-weight: bold;
-        }
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Semáforo TRIAGE</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+        body { background: #f4f6f8; padding: 20px; display: flex; justify-content: center; }
+        .schedule-container { width: 100%; max-width: 650px; background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { color: #0b2545; font-size: 32px; font-weight: 900; font-style: italic; text-align: center; margin-bottom: 20px; }
+        table { width: 100%; border-collapse: separate; border-spacing: 0 12px; text-align: center; }
+        th { background: #e2e8f3; color: #0b2545; padding: 10px; border-radius: 8px; font-size: 13px; font-weight: 700; }
+        td { padding: 8px; font-size: 13px; font-weight: 600; line-height: 1.3; }
+        .tipo { font-size: 16px; font-weight: 900; font-style: italic; }
+        
+        .r1 { color: #e62e2e; }
+        .r2 { color: #ee6c29; }
+        .r3 { color: #cba000; }
+        .r4 { color: #00a859; }
+        .r5 { color: #004fb0; }
     </style>
 </head>
 <body>
 
 <div class="schedule-container">
-    <div class="group-id">Semaforo <br style="width: 90%"> TRIAGE </div>
-
+    <h1>Semáforo TRIAGE</h1>
     <table>
         <thead>
             <tr>
-                <th style="width: 10%; bg: gray;">Tipo de atención</th>
-                <th style="width: 18%;">Área de atención</th>
-                <th style="width: 18%;">Tiempo de espera</th>
+                <th>Tipo de atención</th>
+                <th>Área de atención</th>
+                <th>Tiempo de espera</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td class="time-col">Reanimacion</td>
-                <td>
-                    <div class="cell-content">
-                        <span class="subject-code">Area de reanimacion</span>
-                    </div>
-                </td>
-                <td>
-                	<div class="cell-content">
-                        <span class="subject-code">Inmediato hasta 3 min</span>
-                    </div>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="time-col">Emergencia</td>
-                <td>
-                    <div class="cell-content">
-                        <span class="subject-code">Area de reanimacion</span>
-                    </div>
-                </td>
-                <td>
-                	<div class="cell-content">
-                        <span class="subject-code">Inmediato hasta 10 min </span>
-                    </div>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="time-col"> Urgencia </td>
-                <td>
-                    <div class="cell-content">
-                        <span class="subject-code"> Consultorio de primer contacto </span>
-                    </div>
-                </td>
-                <td>
-                    <div class="cell-content">
-                        <span class="subject-code">Hasta 30 min</span>
-                    </div>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="time-col">Urgencia menor</td>
-                <td>
-                    <div class="cell-content">
-                        <span class="subject-code">Consultorio de primer contacto o UMF</span>
-                    </div>
-                </td>
-                <td>
-                    <div class="cell-content">
-                        <span class="subject-code">Hasta 120 min</span>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="time-col">Sin Urgencia</td>
-                <td>
-                    <div class="cell-content">
-                        <span class="subject-code">Consultorio de primer contacto o UMF</span>
-                    </div>
-                </td>
-                <td>
-                    <div class="cell-content">
-                        <span class="subject-code">Hasta 180 min</span>
-                    </div>
-                </td>
-            </tr>
+            <tr class="r1"><td class="tipo">Reanimación</td><td>Área de reanimación</td><td>Inmediato hasta 3 min</td></tr>
+            <tr class="r2"><td class="tipo">Emergencia</td><td>Área de reanimación</td><td>Inmediato hasta 10 min</td></tr>
+            <tr class="r3"><td class="tipo">Urgencia</td><td>Consultorio de primer contacto</td><td>Hasta 30 min</td></tr>
+            <tr class="r4"><td class="tipo">Urgencia menor</td><td>Consultorio de primer contacto o UMF</td><td>Hasta 120 min</td></tr>
+            <tr class="r5"><td class="tipo">Sin urgencia</td><td>Consultorio de primer contacto o UMF</td><td>Hasta 180 min</td></tr>
         </tbody>
     </table>
 </div>
